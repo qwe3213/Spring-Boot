@@ -35,4 +35,9 @@ public class MemoryMemberRepository implements MemberRepository{
         return new ArrayList<>(store.values());
         //맵의 값을 리스트에 넣어 반환
     }
+
+    public void clearStore(){
+        store.clear();
+        // 한클래스에서 여러개를 테스트 할때 한 메서드가 테스트후 정보를 지우기위해 clearStore메서드 선언
+    }
 }
