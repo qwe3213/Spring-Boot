@@ -9,9 +9,13 @@ import java.util.Optional;
 
 // service 쪽은 비지니스쪽 용어 사용 편리
 public class MemberService {
+// command + shift + t  테스트 겉보기 자동완성
+    private final MemberRepository memberRepository;
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
+// 외부에서 넣도록 설정
     /*
     * 회원 가입
     * */
