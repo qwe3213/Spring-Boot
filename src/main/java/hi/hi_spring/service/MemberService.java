@@ -3,15 +3,18 @@ package hi.hi_spring.service;
 import hi.hi_spring.domain.Member;
 import hi.hi_spring.repository.MemberRepository;
 import hi.hi_spring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 // service 쪽은 비지니스쪽 용어 사용 편리
+@Service
 public class MemberService {
 // command + shift + t  테스트 겉보기 자동완성
     private final MemberRepository memberRepository;
-
+@Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
