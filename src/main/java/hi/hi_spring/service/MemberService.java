@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.Optional;
 
 // service 쪽은 비지니스쪽 용어 사용 편리
-@Service
+
 public class MemberService {
 // command + shift + t  테스트 겉보기 자동완성
     private final MemberRepository memberRepository;
-@Autowired
+
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
